@@ -60,3 +60,10 @@ async def animal_meme(ctx):
         file = discord.File(f)
     await ctx.send("Berikut meme hewan untukmu!")
     await ctx.send(file=file)
+
+@bot.command()
+async def tips(ctx):    
+    with open('contoh.txt', 'r', encoding='utf-8') as b:
+        document = b.read()
+    await ctx.send(document)
+
